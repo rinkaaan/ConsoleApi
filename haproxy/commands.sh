@@ -1,6 +1,9 @@
 haproxy -f ./haproxy.cfg
 
-sudo certbot -d media-api.lincolnnguyen.me --manual --preferred-challenges dns certonly
+sudo certbot \
+-d media-api.lincolnnguyen.me \
+-d transcribe-api.lincolnnguyen.me \
+--manual --preferred-challenges dns certonly
 
 sudo cat \
 /etc/letsencrypt/live/media-api.lincolnnguyen.me/fullchain.pem \

@@ -44,7 +44,7 @@ module.exports = {
     // Transcribe
     {
       name: "app-transcribe",
-      cwd: "/root/workplace/TranscriberApp",
+      cwd: "/root/workplace/Transcribe/TranscribeApp",
       namespace: "transcribe",
       script: "serve",
       env: {
@@ -53,6 +53,14 @@ module.exports = {
         PM2_SERVE_SPA: 'true',
         PM2_SERVE_HOMEPAGE: '/index.html'
       }
+    },
+    {
+      name: "api-transcribe",
+      cwd: "/root/workplace/Transcribe/TranscribeApi",
+      namespace: "transcribe",
+      script: "./scripts/start.sh",
+      interpreter: "bash",
+      env: { PORT: 34204 }
     },
   ]
 }
